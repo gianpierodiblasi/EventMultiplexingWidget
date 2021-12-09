@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+  <ExtensionPackages>
+    <ExtensionPackage 
+      name="EventMultiplexingWidget"
+      packageVersion="1.1.0"
+      vendor="Accenture Italy - Industry X"
+      description="Extension to multiplex an event"
+      minimumThingWorxVersion="8.3.0"
+      dependsOn=""> 
+    </ExtensionPackage>
+  </ExtensionPackages>
+  
+  <Widgets>
+    <Widget name="eventmultiplexing">
+      <UIResources>
+        <FileResource description="" file="eventmultiplexing.ide.js" isDevelopment="true" isRuntime="false" type="JS"/>
+        <FileResource description="" file="eventmultiplexing.ide.css" isDevelopment="true" isRuntime="false" type="CSS"/>
+        <FileResource description="" file="eventmultiplexing.runtime.js" isDevelopment="false" isRuntime="true" type="JS"/>
+        <FileResource description="" file="eventmultiplexing.runtime.css" isDevelopment="false" isRuntime="true" type="CSS"/>
+      </UIResources>
+    </Widget>
+  </Widgets>
+</Entities>
