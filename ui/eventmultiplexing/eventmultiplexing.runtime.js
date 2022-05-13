@@ -73,4 +73,28 @@ TW.Runtime.Widgets.eventmultiplexing = function () {
       console.log("EventMultiplexing -> Stop");
     }
   };
+
+  this.updateProperty = function (updatePropertyInfo) {
+    if (updatePropertyInfo.TargetProperty.startsWith("Value")) {
+      var inOutType = thisWidget.getProperty('inOutType');
+
+      switch (inOutType) {
+        case "INTEGER":
+          this.setProperty(updatePropertyInfo.TargetProperty, parseInt(updatePropertyInfo.SinglePropertyValue, 10));
+          break;
+        case "NUMBER":
+          this.setProperty(updatePropertyInfo.TargetProperty, parseFloat(updatePropertyInfo.SinglePropertyValue));
+          break;
+        case "DATETIME":
+          this.setProperty(updatePropertyInfo.TargetProperty, new Date(updatePropertyInfo.SinglePropertyValue));
+          break;
+        case "BOOLEAN":
+          this.setProperty(updatePropertyInfo.TargetProperty, updatePropertyInfo.SinglePropertyValue === 'true' || updatePropertyInfo.SinglePropertyValue === true);
+          break;
+        default:
+          this.setProperty(updatePropertyInfo.TargetProperty, updatePropertyInfo.RawSinglePropertyValue);
+          break;
+      }
+    }
+  };
 };
