@@ -4,7 +4,7 @@
     <ExtensionPackage 
       name="EventMultiplexingWidget"
       packageVersion="1.2.0"
-      vendor="Accenture Italy - Industry X"
+      vendor="Gianpiero Di Blasi"
       description="Extension to multiplex an event"
       minimumThingWorxVersion="8.3.0"
       dependsOn=""> 
