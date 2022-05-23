@@ -1,6 +1,8 @@
 # EventMultiplexingWidget
 An extension to multiplex an event.
 
+**This Extension is provided as-is and without warranty or support. It is not part of the PTC product suite and there is no PTC support.**
+
 ## Description
 This extension provides a widget to multiplex an event, it is an advanced version of standard event router, but it is event-driven instead of value-driven.
 
