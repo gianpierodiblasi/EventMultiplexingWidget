@@ -3,7 +3,7 @@
   <ExtensionPackages>
     <ExtensionPackage 
       name="EventMultiplexingWidget"
-      packageVersion="1.2.0"
+      packageVersion="1.2.1"
       vendor="Gianpiero Di Blasi"
       description="Extension to multiplex an event"
       minimumThingWorxVersion="8.3.0"

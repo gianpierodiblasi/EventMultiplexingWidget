@@ -54,7 +54,7 @@ TW.Runtime.Widgets.eventmultiplexing = function () {
         value = parseFloat(value);
         break;
       case "DATETIME":
-        value = new Date(value);
+        value = value ? new Date(value) : null;
         break;
       case "BOOLEAN":
         value = value === 'true' || value === true;
@@ -86,7 +86,7 @@ TW.Runtime.Widgets.eventmultiplexing = function () {
           this.setProperty(updatePropertyInfo.TargetProperty, parseFloat(updatePropertyInfo.SinglePropertyValue));
           break;
         case "DATETIME":
-          this.setProperty(updatePropertyInfo.TargetProperty, new Date(updatePropertyInfo.SinglePropertyValue));
+          this.setProperty(updatePropertyInfo.TargetProperty, updatePropertyInfo.SinglePropertyValue ? new Date(updatePropertyInfo.SinglePropertyValue) : null);
           break;
         case "BOOLEAN":
           this.setProperty(updatePropertyInfo.TargetProperty, updatePropertyInfo.SinglePropertyValue === 'true' || updatePropertyInfo.SinglePropertyValue === true);
